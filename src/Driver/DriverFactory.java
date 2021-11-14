@@ -1,4 +1,4 @@
-package lesson14;
+package Driver;
 
 import caps.MobileCapabilityTypeEx;
 import io.appium.java_client.AppiumDriver;
@@ -24,16 +24,16 @@ public class DriverFactory {
 
     }
     public static void stopAppiumServer (){
-        String killNodeWindowsCmd = "taskkill /F /IM node.exe";
-        String killNodeLinuxCmd = "killall node";
-        String currentOS = System.getProperty("os.name").toLowerCase();
-        String killNodeCmd = currentOS.startsWith("windows") ? killNodeWindowsCmd : killNodeLinuxCmd;
-        Runtime runtime = Runtime.getRuntime();
-        try{
-            runtime.exec(killNodeCmd);
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+//        String killNodeWindowsCmd = "taskkill /F /IM node.exe";
+//        String killNodeLinuxCmd = "killall node";
+//        String currentOS = System.getProperty("os.name").toLowerCase();
+//        String killNodeCmd = currentOS.startsWith("windows") ? killNodeWindowsCmd : killNodeLinuxCmd;
+//        Runtime runtime = Runtime.getRuntime();
+//        try{
+//            runtime.exec(killNodeCmd);
+//        } catch (IOException e){
+//            e.printStackTrace();
+//        }
     }
 
     public static AndroidDriver<MobileElement> getAndroidDriver(){
